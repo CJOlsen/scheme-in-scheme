@@ -1,0 +1,36 @@
+scheme-in-scheme is almost verbaitim the running example in The Structure and
+Interpretation of Computer Programs Chapter 4 (full text available online here:
+http://mitpress.mit.edu/sicp/full-text/book/book.html)
+
+The most notable change is eval and apply are named eval2 and apply2 
+respectively, storing apply in apply-in-underlying-scheme and then overwriting 
+the original wasn't working for whatever reason.
+
+To use:
+
+It's easiest to use this with Edwin, MIT-Scheme's Emacs-like editor.  In Debian,
+once MIT-Scheme is installed you can run Edwin with the command 
+"mit-scheme --edit" then 'C-x C-f' (Control x, then Control f) will allow you 
+to "find" or open the file.  Then 'C-x 3' (Control x, then 3) will split the 
+screen, 'C-b' in the new screen will allow you to switch to *scheme* the built
+in buffer, 'M-o' (alt o) in the file buffer will evaluate everything (which 
+you'll need to do more than once because of the order, sorry), then evaluating
+the command (driver-loop) in the *scheme* buffer will open an embedded the new
+Scheme with its complete shortage of primitives, but working lambda functions.
+
+If you're not familiar with Emacs/Edwin you should probably do a tutorial 
+because none of this will make much sense otherwise.
+
+
+To extend:
+
+The function primitive-procedures is where you can add new primitives, the
+sky's the limit.  You can put lambda functions there inline, or write new
+stuff and reference it, or just call on stuff from the main Scheme.
+
+One note:
+
+When modifying the implementation the changes don't always happen the way you
+expect them to.  When in doubt start a new *scheme* repl so you know none of 
+the old definitions are hanging around.
+
