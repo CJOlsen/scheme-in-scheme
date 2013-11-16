@@ -13,7 +13,7 @@ once MIT-Scheme is installed you can run Edwin with the command
 "mit-scheme --edit" then 'C-x C-f' (Control x, then Control f) will allow you 
 to "find" or open the file.  Then 'C-x 3' (Control x, then 3) will split the 
 screen, 'C-b' in the new screen will allow you to switch to *scheme* the built
-in buffer, 'M-o' (alt o) in the file buffer will evaluate everything (which 
+in repl, 'M-o' (alt o) in the file buffer will evaluate everything (which 
 you'll need to do more than once because of the order, sorry), then evaluating
 the command (driver-loop) in the *scheme* buffer will open an embedded the new
 Scheme with its complete shortage of primitives, but working lambda functions.
